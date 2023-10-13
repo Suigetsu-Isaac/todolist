@@ -1,6 +1,7 @@
 FROM ubuntu:latest AS build
 
 RUN apt-get update
+RUN apt list | grep openjdk
 RUN apt-get install openjdk-21-jdk/lunar -y
 
 COPY . .
